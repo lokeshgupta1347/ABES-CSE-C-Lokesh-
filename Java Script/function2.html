@@ -5,27 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #adi{
+        /* #adi{
             border: 5px solid red;
             height: 200px;
             width:400px ;
             background-color: chocolate;
-        }
+        } */
     </style>
 </head>
-<body>
+<body id="adi2">
 
-    <div id="adi">
+    <!-- <div id="adi">
         <button onclick="ad()">click</button>
         <p id="aaa"></p>
-    </div>
+    </div> -->
+
+
+    <button onclick="red()">Red</button>
+    <button onclick="green()">Green</button>
+    <button onclick="blue()">Blue</button>
 
 
     <script>
-        function ad()
+        // function ad()
+        // {
+        //     document.getElementById("aaa").innerHTML="<h1>Hello</h1>";
+        // }
+
+
+        function red()
         {
-            document.getElementById("aaa").innerHTML="<h1>Hello</h1>";
+            document.getElementById("adi2").style.backgroundColor="red";
         }
+
+        function green()
+        {
+            document.getElementById("adi2").style.backgroundColor="green";
+        }
+
+        function blue()
+        {
+            document.getElementById("adi2").style.backgroundColor="blue";
+        }
+
+
     </script>
 </body>
 </html>
