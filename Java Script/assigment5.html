@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 350px;
+            width: 300px;
+            background: wheat;
+
+        }
+        .logo-section{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .logo-section img{
+               height: 70px;
+               width: 70px;
+        }
+        .logo-section h1{
+            font-family: sans-serif;
+            font-size: 30px;
+        }
+        .counter{
+            font-size: 60px;
+        }
+        .button{
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:50px;
+            
+            
+        }
+        button{
+            
+            
+            justify-content: center;
+            font-size: 50px;
+            height: 50px;
+            width: 70px;
+            background: red;
+            border-radius: 10px;
+           
+            
+        }
+        
+        
+
+        
+    </style>
+
+</head>
+<body>
+
+    <div id="box">
+        <div class="logo-section">
+            <img src="https://img.icons8.com/?size=160&id=RfxUdrs7Ze51&format=png" alt="">
+            <h1>Counter App</h1>
+        </div>
+        <center><div class="counter">0</div></center>
+        <center><div class="msg"></div></center>
+        <div class="button">
+            <button class="plus" onclick="plus()">+</button>
+            <button class="minus" onclick="minus()">-</button>
+        </div>
+        <center><button style="font-size: 20px; margin-top: 10px;" class="reset" onclick="reset()">Reset</button></center>
+
+    </div>
+
+
+
+  
+
+   <script>
+    let count = 0;
+    const counterEl = document.querySelector('.counter');
+    const msgEl = document.querySelector('.msg');
+
+    function updateCounter() {
+        counterEl.textContent = count;
+    }
+
+
+    function reset()
+    {
+        count=0;
+        msgEl.textContent = "";
+        updateCounter();
+    }
+
+    function plus() {
+        if (count >= 10) {
+            msgEl.textContent = "Maximum limit reached!";
+            alert("Maximum limit reached!");
+            return;
+        }
+        count++;
+        msgEl.textContent = "";
+        updateCounter();
+    }
+
+    function minus() {
+        if (count <= 0) {
+            msgEl.textContent = "Minimum limit reached!";
+            alert("Minimum limit reached!");
+            return;
+        }
+        count--;
+        msgEl.textContent = "";
+        updateCounter();
+    }
+</script>
+    
+
+    
+</body>
+</html>
