@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let even="";
+        let odd="";
+        let a=2,b=3;
+        var i=1;
+        for (i=1;i<=10;i++)
+    {
+        document.write(`${a} * ${i}= ${a*i} <br>`);
+        if ((a*i)%2===0)
+    {
+        even=even+`${a*i},`;
+    }
+    else {
+        odd=odd+`${a*i},`;
+    }
+    
+        
+    }
+    document.writeln("<br>");
+
+    for (i=1;i<=10;i++)
+    {
+       document.write(`${b} * ${i}= ${b*i} <br>`);
+       if ((b*i)%2===0)
+    {
+        even=even+`${b*i},`;
+    }
+    else {
+        odd=odd+`${b*i},`;
+    }
+       
+    }
+
+    document.writeln("<br>");
+
+    document.writeln("Even: "+even);
+    document.writeln("<br>")
+    
+
+    document.writeln("Odd: "+odd);
+    </script>
+</body>
+</html>
