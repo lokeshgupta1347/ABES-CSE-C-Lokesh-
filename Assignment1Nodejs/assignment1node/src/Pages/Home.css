@@ -1,0 +1,14 @@
+.home {
+  text-align: center;
+  padding: 40px;
+}
+
+.home-image {
+  width: 60%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.home-text {
+  margin-top: 20px;
+}

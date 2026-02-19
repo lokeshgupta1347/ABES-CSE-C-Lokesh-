@@ -2,7 +2,7 @@ import React from 'react'
 import Book from './Components/Book'
 import './App.css'
 import Navbar from './Components/Navbar'
-import './Navbar.css'
+import './Components/Navbar.css'
 
 function App() {
   return (
