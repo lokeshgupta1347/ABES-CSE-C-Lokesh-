@@ -43,29 +43,29 @@ app.get('/read',(req,res)=>{
 })
 
 //data read for id(R)
-app.get('/read/:id',(req,res)=>{
-    try{
-        const id=req.params.id;
-        const student=students.find(s=>s.id==id);
-        if(!student)
-        {
-            return res.status(404).json({
-                message:"student not found"
-            })
-        }
-        res.status(200).json({message:"student data found",
-            student
-        })
-        }
+// app.get('/read/:id',(req,res)=>{
+//     try{
+//         const id=req.params.id;
+//         const student=students.find(s=>s.id==id);
+//         if(!student)
+//         {
+//             return res.status(404).json({
+//                 message:"student not found"
+//             })
+//         }
+//         res.status(200).json({message:"student data found",
+//             student
+//         })
+//         }
 
-    catch(err){
-        res.status(500).json({message:" students data not found",
-            error:err.message})
+//     catch(err){
+//         res.status(500).json({message:" students data not found",
+//             error:err.message})
 
-    }
+//     }
 
 
-})
+// })
 
 
 
