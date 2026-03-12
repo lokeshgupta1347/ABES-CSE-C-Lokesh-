@@ -82,27 +82,27 @@ app.get('/image',(req,res)=>{
 })
 
 //data create
-// app.post('/add',(req,res)=>{
-//      try{
-//         const newstudent={
-//             id:students.length+1,
-//             //name:req.body.name,
-//             //class:req.body.class
-//             ...req.body
+app.post('/add',(req,res)=>{
+     try{
+        const newstudent={
+            id:students.length+1,
+            //name:req.body.name,
+            //class:req.body.class
+            ...req.body
 
-//         }
-//         students.push(newstudent);
-//         res.status(201).json({message:"student data successful add",newstudent})
-//         }
+        }
+        students.push(newstudent);
+        res.status(201).json({message:"student data successful add",newstudent})
+        }
 
-//     catch(err){
-//         res.status(500).json({message:" students data not found",
-//             error:err.message})
+    catch(err){
+        res.status(500).json({message:" students data not found",
+            error:err.message})
 
-//     }
+    }
 
 
-// })
+})
 
 app.listen(port,()=>{
     console.log(`server is run at http://localhost:${port}`);
